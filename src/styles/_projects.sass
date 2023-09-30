@@ -1,0 +1,109 @@
+.projects 
+    @include page()
+
+    .project__item:not(first-child)
+        margin-top: 10px
+
+.project__title-row
+    @include project-item()
+
+    font-size: $font-small
+    color: $black
+
+.project__item
+    @include element($backgroundColor: $white-dim, $padding: 0px)
+    position: relative
+
+.project__item--finished
+    background: $white-alpha-20
+
+.project__main-info
+    @include project-item()
+
+    position: relative
+    height: 60px
+    color: $dark-grey
+
+    svg
+        position: absolute
+        top: 50%
+        margin-top: -4px
+        right: 20px
+
+.project__details
+    display: flex
+    justify-content: space-between
+    padding: 20px
+
+.warning-message__project
+    padding: 0 0 10px 20px
+
+.deadline-status
+    position: absolute
+    top: 0
+    left: 0
+
+    height: 100%
+    width: 6px
+    border-radius: 4px 0px 0px 4px
+
+.deadline-status--active
+    background: $green-alpha
+
+.deadline-status--expired
+    background: $red-alpha
+
+.deadline-status--warning
+    background: $yellow-alpha
+
+.deadline-status--finished
+    background: $black-alpha
+
+.project__info
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+
+.project__description--text
+    margin-top: 10px
+    line-height: 20px
+
+.project__uploaded-files
+    display: flex
+    align-items: center
+    
+    margin-top: 10px
+
+.project__uploaded-files--text
+    margin-left: 10px
+
+.project__tasks
+    margin-left: 124px
+
+.project__tasks--header
+    display: flex
+    align-items: flex-end
+    justify-content: space-between
+
+.project__more-tasks
+    display: flex
+    align-items: center
+
+    svg
+        rotate: 270deg
+        width: 12px
+        margin-left: 8px
+
+.project__task-list
+    width: 290px
+
+.project__task-item
+    @include element($backgroundColor: $light-grey, $padding: 10px 20px)
+
+    position: relative
+
+    width: 100%
+    margin-top: 4px
+    
+    &:first-child
+        margin-top: 10px

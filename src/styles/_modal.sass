@@ -1,0 +1,38 @@
+.modal-wrapper
+    position: fixed
+    top: 0
+    left: 0
+
+    padding: 20px 0px
+    box-sizing: border-box
+
+    width: 100vw
+    height: 100vh
+    background: $black-alpha-20
+
+.modal
+    @include element($backgroundColor: $light-grey, $padding: 30px 30px 60px 30px)
+
+    width: 1140px
+    height: 100%
+    margin: 0 auto
+
+    overflow-x: scroll
+
+    @media screen and (max-width: 1170px)
+        width: 90%
+
+.modal__title
+    font-weight: normal
+    font-size: $font-big
+    color: $dark-grey
+
+.modal__header
+    display: flex
+    justify-content: space-between
+    align-items: center
+    
+    @media screen and (max-width: 750px)
+        display: block
+        button
+            margin-top: 20px

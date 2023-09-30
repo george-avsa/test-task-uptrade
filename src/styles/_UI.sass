@@ -1,0 +1,114 @@
+.icon
+    display: flex
+    align-items: center
+    justify-content: center
+
+    cursor: pointer
+
+    color: $grey
+    
+.icon--circle
+    width: 34px
+    height: 34px
+    border-radius: 50%
+    background: $light-grey
+
+.warning-message
+    color: $black
+    display: flex
+    align-items: center
+
+.warning-text
+    font-size: $font-light
+    margin-left: 8px
+
+.warning-message--error
+    color: $red
+
+.input-element, .form-element
+    position: relative
+    margin-top: 20px
+
+.input-element__label, .form-element__label
+    @include item-title()
+
+input[type="text"], textarea, .select-element
+    @include form-element
+
+.select-element__icon
+    position: absolute
+    top: 50%
+    right: 20px
+    margin-top: -8px
+
+    width: 16px
+    height: 16px
+    color: $dark-grey
+
+.select-item
+    height: 100%
+    display: flex
+    align-items: center
+
+.select-element__cirlce
+    width: 10px
+    height: 10px
+    border-radius: 50%
+
+.select-element__value
+    margin-left: 8px
+
+.dropdown
+    @include element($padding: 10px 72px 10px 30px)
+
+    position: absolute
+    top: calc( 100% + 4px )
+    left: 0
+
+    width: 100%
+
+    .select-item
+        padding: 10px 0px
+
+    .select-item:not(:first-child)
+        border-top: 1px solid $light-grey
+
+    z-index: 10
+
+    filter: $shadow
+
+textarea
+    padding: 16px 72px 16px 30px
+    height: 100px
+    resize: none
+
+button
+    padding: 0 30px
+    height: 40px
+    border-radius: 4px
+    border: 0px solid $black
+    background: $grey
+    color: $white-dim
+
+::-webkit-input-placeholder 
+    font-size: $font-normall
+    color: $dark-grey
+    opacity: 1
+::-moz-placeholder
+    font-size: $font-normall
+    color: $dark-grey
+    opacity: 1
+:-moz-placeholder
+    font-size: $font-normall
+    color: $dark-grey
+    opacity: 1
+:-ms-input-placeholder
+    font-size: $font-normall
+    color: $dark-grey
+    opacity: 1
+
+[class*="project"][class*="--title"]
+    @include item-title()
+
+[class*="project"][class*="--text"]
+    @include small-text()
